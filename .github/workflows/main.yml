@@ -67,8 +67,7 @@ jobs:
         run: |
           ls -l .
           python train.py
-          ls -l .
-          mv model.json model.${{ steps.vars.outputs.sha_short }}.json
+
           echo "Trained model ${{ steps.vars.outputs.sha_short }} with data latest"
           ls -l .
 
@@ -87,3 +86,6 @@ jobs:
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
+
+
+# mv model.json model.${{ steps.vars.outputs.sha_short }}.json
