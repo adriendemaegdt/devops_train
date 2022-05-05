@@ -12,3 +12,4 @@ RUN pip3 install -r requirements.txt
 
 CMD [ "python3", "train.py"]
 # CMD au lieu de run python 
+
